@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>First Workplace</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+<script>
+  function showresult(){
+    var name = document.getElementById('name').value;
+	var phno =  document.getElementById('phno').value;
+	var email =  document.getElementById('email').value;
+	var addr = document.getElementById('addr').value;
+	var feed = document.getElementById('feed').value;
+	document.write("Entered data:<br>");
+	document.write(name+"<br>");
+	document.write(phno+"<br>");
+	document.write(email+"<br>");
+	document.write(addr+"<br>");
+	document.write(feed+"<br>");
+}
+</script>
+</head>
+<body>
+<h2 style="text-align:center;">First day at Mindfire Solutions</h2>
+<center>
+<p>Intern Feedbacks</p>
+<form onsubmit="showresult();">
+	Name:
+	<input id="name" type="text" name="name"><br>
+	Phone Number:
+	<input id="phno" type="number" name="phno" maxlength="10"><br>
+	E-Mail:
+	<input id="email" type="email" name="email"><br>
+	Address:
+	<input id="addr" type="address" name="addr"><br>
+	Rate your first day:
+	<input id="feed" type="radio" name="feedback" value="1">1
+	<input id="feed" type="radio" name="feedback" value="2">2
+	<input id="feed" type="radio" name="feedback" value="3">3
+	<input id="feed" type="radio" name="feedback" value="4">4<br>
+	<input type="submit" value="Submit" id="submit">
+	<input type="reset" value="Reset">
+</form>
+</center>	
+</body>
+</html>
