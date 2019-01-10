@@ -1,3 +1,14 @@
+/**
+* File Name  : 
+* Description : 
+* Created date : 
+* Author  : 
+* Comments : 
+*/
+
+/**
+**
+*/
 function showresult()
 {
 	//Fetching data from form using id
@@ -39,11 +50,4 @@ function showresult()
 	data.innerHTML = var1;
 
 	
-}
-
-function validateform(){
-	if (fname == ' '){
-		alert('First name must be filled.');
-		return false;
-	}
 }
