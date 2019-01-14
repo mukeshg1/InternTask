@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration</title>
+  <!--Linking CSS and Javascript page-->
+  <link rel="stylesheet" href="RegFormStyle.css">
+</head>
+<body class="bodyclass">
+<center>
+<div class="registerform">
+<h2 class="heading">Register Yourself</h2><br>
+<p><i>Fill out the form to register</i></p>
+<!--Form to register with different attributes-->
+<form id="register_form">
+  <b>Name:<sup>*</sup></b><br>
+  <input type="text" class="inputstyle1" id="first_name" autocomplete="off" placeholder="Firstname" required>
+  <input type="text" class="inputstyle1" id="middle_name" autocomplete="off" placeholder="Middlename">
+  <input type="text" class="inputstyle1" id="last_name" onkeyup="checkName()" autocomplete="off" placeholder="Lastname" required>
+  <span class="errorMessage" id="name_Error"></span><br>
+  <b>Sex:</b><br>
+  <input type="checkbox" class="inputstyle3" id="sex1" value="male">Male
+  <input type="checkbox" class="inputstyle3" id="sex2" value="female">Female
+  <input type="checkbox" class="inputstyle3" id="sex3" value="others">Others<br>
+  <b>Phone Number:<sup>*</sup></b><br>
+  <select class="select" id="country_code">
+    <option value="">Country code</option>
+	<option value="+91" required>India(+91)</option>
+	<option value="+86" required>China(+86)</option>
+	<option value="+977" required>Nepal(+977)</option>
+	<option value="+1" required>USA(+1)</option>
+	<option value="+44" required>UK(+44)</option>
+  </select>
+  <input type="text" class="inputstyle1" id="phone_number" placeholder="Mobile Number" maxlength="10" pattern= "[0-9]"  title= "Enter numbers only" required><br>
+  <span class="errorMessage" id="code_Error"></span></span><span class="errorMessage" id="phone_Error"></span><br>
+  <b>Date of Birth:<sup>*</sup></b><br>
+  <input type="date" class="inputstyle1" id="birth_date"><br>
+  <span class="errorMessage" id="birth_date_Error"></span><br>
+  <b>E-Mail:<sup>*</sup></b><br>
+  <input type="email" class="inputstyle2" id="user_email" autocomplete="off" placeholder="Enter your E-Mail address" required><br>
+  <span class="errorMessage" id="email_Error"></span><br>
+  <b>Qualification:</b><br>
+  <select class="select" id="qual">
+    <option value="1">Select</option>
+	<option value="btech">B.Tech</option>
+	<option value="mca">MCA</option>
+  </select><br>
+  <b>Address:<sup>*</sup></b><br>
+  <input type="address" class="inputstyle2" id="user_addr" autocomplete="off" placeholder="Enter your address">
+  <span class="errorMessage" id="user_addr_Error"></span><br>
+  <b>Describe Yourself:<sup>*</sup></b><br>
+  <textarea id="about_user" class="textarea" rows="5" cols="20"  placeholder="Write about yourself here..."></textarea><br>
+  <span class="errorMessage" id="about_user_Error"></span><br>
+  <input type="button" id="submit_btn" value="Submit">
+  <input type="reset" id="reset_btn" value="Reset">
+</form>
+</div>
+</center>
+
+<!--Table to display enetered value in form-->
+<table id="table_user">
+  <tr>
+    <th>Name</th>
+	<th>Sex</th>
+	<th>Phone Number</th>
+	<th>Date of Birth</th>
+	<th>E-Mail</th>
+	<th>Qualification</th>
+	<th>Address</th>
+	<th>About</th>
+	<th>Options</th>
+  </tr>
+  <!--Fetching data from the script to display in table using id-->
+  <tbody id='user_data'>  
+  </tbody>
+</table>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="validate2.js"></script>
+</body>
+</html>
