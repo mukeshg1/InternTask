@@ -1,13 +1,21 @@
+<!--
+* File Name  : RegistrationForm
+* File Path: C:\Users\mukeshg\Desktop\Internship\RegFormJquery
+* Description : Creation of form and displaying entered data in form in table
+* Created date : 14/01/2019
+* Author  : @Mukesh
+-->
+
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
   <title>Registration</title>
-  <!--Linking CSS and Javascript page-->
   <link rel="stylesheet" href="RegFormStyle.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="bodyclass">
 <center>
-<div class="registerform">
+<div class="registerform"><!--div register form start-->
 <h2 class="heading">Register Yourself</h2><br>
 <p><i>Fill out the form to register</i></p>
 <!--Form to register with different attributes-->
@@ -38,12 +46,6 @@
   <b>E-Mail:<sup>*</sup></b><br>
   <input type="email" class="inputstyle2" id="user_email" autocomplete="off" placeholder="Enter your E-Mail address" required><br>
   <span class="errorMessage" id="email_Error"></span><br>
-  <b>Qualification:</b><br>
-  <select class="select" id="qual">
-    <option value="1">Select</option>
-	<option value="btech">B.Tech</option>
-	<option value="mca">MCA</option>
-  </select><br>
   <b>Address:<sup>*</sup></b><br>
   <input type="address" class="inputstyle2" id="user_addr" autocomplete="off" placeholder="Enter your address">
   <span class="errorMessage" id="user_addr_Error"></span><br>
@@ -53,7 +55,7 @@
   <input type="button" id="submit_btn" value="Submit">
   <input type="reset" id="reset_btn" value="Reset">
 </form>
-</div>
+</div><!--division regform end-->
 </center>
 
 <!--Table to display enetered value in form-->
@@ -61,10 +63,10 @@
   <tr>
     <th>Name</th>
 	<th>Sex</th>
+	<th>Country Code</th>
 	<th>Phone Number</th>
 	<th>Date of Birth</th>
 	<th>E-Mail</th>
-	<th>Qualification</th>
 	<th>Address</th>
 	<th>About</th>
 	<th>Options</th>
@@ -74,6 +76,6 @@
   </tbody>
 </table>
 <script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="validate2.js"></script>
+<script type="text/javascript" src="validate3.js"></script>
 </body>
 </html>
